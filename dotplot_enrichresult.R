@@ -1,4 +1,5 @@
-dotplot_enrichresult <- function(object, pval = NULL, desc_item = NULL, head_num = NULL, go_ontology = 'ALL', ...){
+dotplot_enrichresult <- function(object, pval = NULL, desc_item = NULL, head_num = NULL, go_ontology = 'ALL'){
+  require(ggplot2)
   er <- object
   pval <- pval %||% 0.05
   desc_item <- desc_item %||% 'Count'

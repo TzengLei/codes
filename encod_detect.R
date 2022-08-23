@@ -15,7 +15,7 @@ enco_dtec <- function(chars, encodings = NULL, get_ob = FALSE){
     non['site'] <- list(site)
     if (get_ob) assign(paste0("non_", encodings), non, envir = .GlobalEnv) else
       return(non)
-  } else warning("there is no non-matching character.", call. = F)
+  } else warning("there is no non-matching character!", call. = F)
 }
 
 # Arguments

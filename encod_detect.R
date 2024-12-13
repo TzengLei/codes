@@ -15,11 +15,11 @@ enco_dtec <- function(chars, encodings = NULL, get_ob = FALSE){
     non['site'] <- list(site)
     if (get_ob) assign(paste0("non_", encodings), non, envir = .GlobalEnv) else
       return(non)
-  } else warning("there is no non-matching character!", call. = F)
+  } else warning("There is no mismatched character!", call. = F)
 }
 
 # Arguments
 # chars: A character to detect.
-# encodings: A character of common encodings(e.g., "UTF-8", "ASCII").
-# get_ob: Logical. If FALSE, the results of non-matching character and their site will printing on screen, if TRUE, 
+# encodings: A character of common encoding(e.g., "UTF-8", "ASCII").
+# get_ob: Logical. If FALSE, the value and site of each mismatched character will print on the screen, if TRUE, 
 # return an object contains the results.
